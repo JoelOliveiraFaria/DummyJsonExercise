@@ -63,9 +63,12 @@ fun RecipesListViewContent(
                 itemsIndexed(
                     items = uiState.recipes,
                 ) { index, item ->
-                    RecipeViewCell(recipe = item) {
-                        navController.navigate("recipe/${item.id}")
-                    }
+                    RecipeViewCell(
+                        recipe = item,
+                        onClick = {
+                            navController.navigate("recipe/${item.id}")
+                        }
+                    )
                 }
             }
         }

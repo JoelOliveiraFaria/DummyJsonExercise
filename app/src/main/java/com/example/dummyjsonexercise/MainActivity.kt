@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.dummyjsonexercise.models.Recipe
 import com.example.dummyjsonexercise.ui.theme.DummyJsonExerciseTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             DummyJsonExerciseTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    RecipeViewCell(
+                        modifier = Modifier.padding(innerPadding),
+                        recipe = Recipe(),
+                        onClick = {}
+                    )
                 }
             }
         }
