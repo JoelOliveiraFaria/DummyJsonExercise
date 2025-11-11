@@ -25,10 +25,9 @@ import java.nio.charset.StandardCharsets
 @Composable
 fun RecipeListView(
     modifier: Modifier = Modifier,
-    navController : NavController,
-    source : String
+    navController: NavController
 ) {
-    val viewModel : RecipesListViewModel = viewModel()
+    val viewModel: RecipesListViewModel = viewModel()
     val uiState by viewModel.uiState
 
     RecipesListViewContent(
@@ -37,7 +36,6 @@ fun RecipeListView(
         navController = navController
     )
 }
-
 @Composable
 fun RecipesListViewContent(
     modifier: Modifier = Modifier,
